@@ -5,10 +5,6 @@ class Solution:
         newNum = 0
 
         for num in nums:
-            if newList == []:
-                newList.append(num)
-                newNum += num
-            else:
                 newNum += num
                 newList.append(newNum)
         return newList
