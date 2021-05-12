@@ -45,4 +45,38 @@ class Solution:
                     res.append(False)
                     break
         return res
+
+# ========================================
+
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
         
+        res = []
+
+        for i in range(n):
+            res.append(nums[i])
+            res.append(nums[i + n])
+
+        return res
+            
+    
+        
+        
+        
+'''
+
+U:
+
+[1, 2, 3, 4, 5, 6]
+n = 3
+output = [1, 4, 2, 5, 3, 6]
+
+[5, 2, 6, 7]
+n = 2
+output = [5, 6, 2, 7]
+
+P:
+
+create 2 lists called res_1 & res_2, create int called count. iterate through nums, appending to res based on count
+
+'''
