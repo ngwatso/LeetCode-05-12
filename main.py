@@ -28,3 +28,21 @@ P:
 iterate through array, add each index to previous answer
 
 '''
+
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        
+        res = []
+
+        for i in candies:
+            k = i + extraCandies
+            for index, j in enumerate(candies):
+                if k >= j and index == len(candies) - 1:
+                    res.append(True)
+                elif k >= j:
+                    continue
+                else:
+                    res.append(False)
+                    break
+        return res
+        
